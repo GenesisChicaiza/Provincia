@@ -1,3 +1,4 @@
+package aplicacion;
 import dominio.Localidad;
 import dominio.Municipio;
 
