@@ -3,12 +3,10 @@ package dominio;
 public class Provincia {
     private String nombre;
     private Municipio[] municipios;
-    private int numeroTotalHabitantesProvincia;
 
     public Provincia(String nombre) {
         this.nombre = nombre;
         this.municipios = new Municipio[0]; // Crear un array de municipios vacío
-        this.numeroTotalHabitantesProvincia=0;
     }
 
     // Método para agregar un municipio a la provincia
@@ -29,12 +27,12 @@ public class Provincia {
     }
 
     // Método para calcular el total de habitantes en la provincia
-    public void getNumeroTotalDeHabitantes() {
+    public int NumeroTotalDeHabitantes() {
         int totalHabitantes = 0;
         for (Municipio municipio : municipios) {
-            totalHabitantes += municipio.getTotalNumeroHabitantesMunicipio();
+            totalHabitantes += municipio. calcularNumeroTotalHabitantesMunicipio();
         }
-        this.numeroTotalHabitantesProvincia=totalHabitantes;
+        return totalHabitantes;
     }
 
     public String getNombre() {
