@@ -32,17 +32,17 @@ public class Interfaz {
                     mostrarInformacion();
                     break;
                 case 5:
-                    System.out.println("Gracias por utilizar el programa.");
+                    System.out.println("Bienvenido el programa.");
                     break;
                 default:
-                    System.out.println("Opción no válida. Intente nuevamente.");
+                    System.out.println("Opción no válida. Intente de nuevo.");
                     break;
             }
         } while (opcion != 5);
 
     }
     private void mostrarMenu() {
-        System.out.println("----------- MENÚ -----------");
+        System.out.println("  MENÚ ");
         System.out.println("1. Crear localidades");
         System.out.println("2. Crear municipios");
         System.out.println("3. Crear provincias");
@@ -57,9 +57,9 @@ public class Interfaz {
         sc.nextLine();
         for (int i = 0; i < cantidad; i++) {
             System.out.println("\n--- CREANDO LOCALIDAD " + (i + 1) + " ---");
-            System.out.print("Ingrese el nombre de la localidad: ");
+            System.out.print("el nombre de la localidad: ");
             String nombre = sc.nextLine();
-            System.out.print("Ingrese el número de habitantes de la localidad: ");
+            System.out.print("el número de habitantes de la localidad: ");
             int habitantes = sc.nextInt();
             sc.nextLine();
             Localidad localidad = new Localidad();
@@ -74,7 +74,7 @@ public class Interfaz {
  
 
     private void crearMunicipios() {
-        System.out.print("\nIngrese la cantidad de municipios que desea crear: ");
+        System.out.print("\nCantidad de municipios que desea crear: ");
         int cantidad = sc.nextInt();
         sc.nextLine();
         for (int i = 0; i < cantidad; i++) {
@@ -171,7 +171,7 @@ public class Interfaz {
 
         }
 
-        System.out.println("No se ha encontrado una provincia a la cual agregar la localidad. Se ha descartado.");
+        System.out.println("No se ha encontrado una provincia a la cual agregar la localidad.");
 
     }
 
@@ -188,7 +188,7 @@ public class Interfaz {
             }
 
         }
-        System.out.println("No se ha encontrado una provincia a la cual agregar el municipio. Se ha descartado.");
+        System.out.println("No se ha encontrado una provincia a la cual agregar el municipio.");
 
     }
 
